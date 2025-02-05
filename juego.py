@@ -1,7 +1,7 @@
-import sys
+import sys, funciones
 
-def juego(key):
-    while key:  # Solo entra en este ciclo si key es False
+def juego():
+    while True:  
         try:
             print("***** Menú *****")
             print("[1] Escoge a tu equipo")
@@ -9,8 +9,10 @@ def juego(key):
             print("[3] Volver al menú anterior")
             opcion = int(input("Elige una opción: "))
             if opcion == 1:
-                print("Elige a 3")
-                sys.exit()  # Se cierra el juego si elige esta opción
+                print("Elige a un personaje")
+                personaje = funciones.leer_archivo("archivos/personajes.txt")
+                print(f"Haz elegido a {personaje.nombre}")
+                
             elif opcion == 2:
                 print("Este es tu equipo")
                 sys.exit()  # También se cierra si elige esta opción

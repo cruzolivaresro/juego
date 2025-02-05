@@ -2,15 +2,14 @@ import sys
 import juego
 
 def main():
-    key = True  # Variable key para controlar el estado
-    while key:  # Ciclo principal del juego
+    while True:  # Ciclo principal del juego
         try:
-            print("Sean bienvenidos al torneo")
-            print("[1] Iniciar registro")
-            print("[2] Salir del torneo")
+            print("La torre busca personas valientes para completar todos sus pisos...")
+            print("[1] Apuntarme a la expedición")
+            print("[2] Salir")
             opcion = int(input("Elige una opción: "))
             if opcion == 1:
-                key = juego.juego(key)  # Llamamos a juego.py y obtenemos el valor de key
+                juego.juego()  # Llamamos a juego.py 
             elif opcion == 2:
                 print("Cerrando juego")
                 sys.exit()  # Sale del juego
