@@ -2,7 +2,7 @@ import sys
 import juego
 
 def main():
-    while True:  # Ciclo principal del juego
+    while True:  # Ciclo principal de main
         try:
             print("La torre busca personas valientes para completar todos sus pisos...")
             print("[1] Apuntarme a la expedición")

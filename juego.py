@@ -1,13 +1,16 @@
 import sys, funciones
 
 def juego():
-    while True:  
+    while True: # Ciclo principal del juego
         try:
             print("***** Menú *****")
-            print("[1] Escoge a tu personaje")
-            print("[2] Observa a tu personaje")
-            print("[3] Volver al menú anterior")
+            print("[0] Comienza la aventura.")
+            print("[1] Escoge a tu personaje.")
+            print("[2] Observa a tu personaje.")
+            print("[3] Volver al menú anterior.")
             opcion = int(input("Elige una opción: "))
+            if opcion == 0:
+                pass
             if opcion == 1:
                 funciones.print_lista_personajes("archivos/personajes.txt")
                 eleccion = int(input("Elige un personaje: "))
