@@ -4,15 +4,18 @@ def juego():
     while True:  
         try:
             print("***** Menú *****")
-            print("[1] Escoge a tu equipo")
-            print("[2] Observa a tu equipo")
+            print("[1] Escoge a tu personaje")
+            print("[2] Observa a tu personaje")
             print("[3] Volver al menú anterior")
             opcion = int(input("Elige una opción: "))
             if opcion == 1:
-                print("Elige a un personaje")
-                personaje = funciones.leer_archivo("archivos/personajes.txt")
-                print(f"Haz elegido a {personaje.nombre}")
-                
+                funciones.print_lista_personajes("archivos/personajes.txt")
+                eleccion = int(input("Elige un personaje: "))
+                if eleccion in [0,1,2,3,4,5,6,7,8,9]:
+                    personaje = funciones.elegir_personaje("archivos/personajes.txt", eleccion)
+                    print(f"Elegiste a {personaje.nombre}")
+                else:
+                    print("Ingresa una opción válida.")
             elif opcion == 2:
                 print("Este es tu equipo")
                 sys.exit()  # También se cierra si elige esta opción

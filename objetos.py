@@ -46,8 +46,8 @@ class Persona(ABC):
             return self._vida <= 0
 
 class Guerrero(Persona):
-    def __init__(self, nombre, vida, fuerza, inteligencia):
-        super().__init__(nombre, vida, fuerza, inteligencia, clase = "Guerrero")
+    def __init__(self, nombre, vida, fuerza, inteligencia, clase = "Guerrero"):
+        super().__init__(nombre, vida, fuerza, inteligencia)
 
     def atacar(self, objetivo):
         objetivo.recibir_daño(self._fuerza)
@@ -67,8 +67,8 @@ class Guerrero(Persona):
 
 
 class Mago(Persona):
-    def __init__(self, nombre, vida, fuerza, inteligencia):
-        super().__init__(nombre, vida, fuerza , inteligencia, clase = "Mago")
+    def __init__(self, nombre, vida, fuerza, inteligencia, clase = "Mago"):
+        super().__init__(nombre, vida, fuerza , inteligencia)
 
     def atacar(self, objetivo):
         objetivo.recibir_daño(self._inteligencia)
